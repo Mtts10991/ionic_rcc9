@@ -66,7 +66,7 @@ const menuItems = [
     mdIcon: homeSharp,
   },
   {
-    title: 'ทดสอบ',
+    title: 'TestPage',
     url: '/test',
     iosIcon: flaskOutline,
     mdIcon: flaskSharp,
