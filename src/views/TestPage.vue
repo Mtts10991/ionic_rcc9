@@ -28,9 +28,23 @@
             </div>
 
             <div class="info-section">
-              <h1 class="name">Somchai Deejai</h1>
-              <p class="title">Senior Software Engineer</p>
-              <p class="org">Ionic Thailand Co., Ltd.</p>
+              <h1 class="name">Nattapon Wongchai</h1>
+              <p class="title">Creative Director & Photographer</p>
+              <p class="org">Lumière Studio, Bangkok</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="bio-section">
+              <p class="bio">
+                เกิดและโตที่เชียงใหม่ หลงรักการถ่ายภาพตั้งแต่อายุ 14 ปี เมื่อพ่อมอบกล้องฟิล์มตัวเก่าให้เป็นของขวัญวันเกิด จากเด็กที่ชอบเดินถ่ายรูปตามตลาดเช้า สู่การเรียนต่อด้าน Visual Arts ที่ลอนดอน
+              </p>
+              <p class="bio">
+                กลับมาเปิดสตูดิโอเล็กๆ ย่านอารีย์เมื่อปี 2561 เริ่มจากงานถ่ายภาพบุคคลให้เพื่อนฝูง จนปากต่อปากพาให้ได้ร่วมงานกับแบรนด์ระดับประเทศ ผลงานถูกตีพิมพ์ใน Vogue Thailand, National Geographic ฉบับภาษาไทย และ a]day Magazine
+              </p>
+              <p class="bio">
+                ปัจจุบันใช้ชีวิตอยู่ระหว่างกรุงเทพฯ กับเชียงใหม่ วันว่างชอบปั่นจักรยานริมแม่น้ำปิง ชงกาแฟดริปดื่มเอง และสอนเวิร์กช็อปถ่ายภาพให้เด็กๆ ในชุมชน เชื่อเสมอว่า "ภาพหนึ่งภาพบอกเล่าเรื่องราวที่คำพูดเอื้อมไม่ถึง"
+              </p>
             </div>
 
             <div class="divider"></div>
@@ -38,15 +52,19 @@
             <div class="details-section">
               <div class="detail-row">
                 <ion-icon :icon="mailOutline" class="detail-icon"></ion-icon>
-                <span>somchai@ionic.th</span>
+                <span>nattapon@lumiere.studio</span>
               </div>
               <div class="detail-row">
                 <ion-icon :icon="callOutline" class="detail-icon"></ion-icon>
-                <span>+66 89 123 4567</span>
+                <span>+66 92 456 7890</span>
               </div>
               <div class="detail-row">
                 <ion-icon :icon="locationOutline" class="detail-icon"></ion-icon>
-                <span>Bangkok, Thailand</span>
+                <span>อารีย์, กรุงเทพฯ</span>
+              </div>
+              <div class="detail-row">
+                <ion-icon :icon="schoolOutline" class="detail-icon"></ion-icon>
+                <span>University of the Arts London, BA Visual Arts</span>
               </div>
             </div>
 
@@ -77,9 +95,9 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/vue';
-import { personCircleOutline, mailOutline, callOutline, locationOutline } from 'ionicons/icons';
+import { personCircleOutline, mailOutline, callOutline, locationOutline, schoolOutline } from 'ionicons/icons';
 
-const tags = ['Vue', 'Ionic', 'TypeScript', 'Node.js'];
+const tags = ['Photography', 'Creative Direction', 'Film', 'Portrait', 'Editorial'];
 </script>
 
 <style scoped>
@@ -179,6 +197,22 @@ ion-card-content {
   margin: 0 0 24px 0;
 }
 
+.bio-section {
+  margin-bottom: 24px;
+}
+
+.bio {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #4b5563;
+  margin: 0 0 14px 0;
+  text-align: justify;
+}
+
+.bio:last-child {
+  margin-bottom: 0;
+}
+
 .details-section {
   display: flex;
   flex-direction: column;
@@ -231,6 +265,10 @@ ion-card-content {
 
   .name {
     color: #f1f5f9;
+  }
+
+  .bio {
+    color: #d1d5db;
   }
 
   .detail-row {
