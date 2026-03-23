@@ -87,11 +87,11 @@ const tags = ['Vue', 'Ionic', 'TypeScript', 'Node.js'];
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 40px;
+  padding-top: 24px;
 }
 
 .profile-card {
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -108,41 +108,41 @@ const tags = ['Vue', 'Ionic', 'TypeScript', 'Node.js'];
 }
 
 ion-card-content {
-  padding: 32px 28px;
+  padding: 36px 36px;
 }
 
 .avatar-section {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .avatar {
-  width: 88px;
-  height: 88px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(102, 126, 234, 0.15);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.18);
 }
 
 .avatar ion-icon {
-  font-size: 56px;
+  font-size: 76px;
   color: #667eea;
 }
 
 .status-dot {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   background: #34d399;
   border-radius: 50%;
   border: 3px solid #fff;
   position: absolute;
-  bottom: 2px;
-  left: calc(50% + 28px);
+  bottom: 4px;
+  left: calc(50% + 38px);
   box-shadow: 0 1px 4px rgba(52, 211, 153, 0.4);
 }
 
@@ -152,22 +152,22 @@ ion-card-content {
 }
 
 .name {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 700;
   color: #1a1a2e;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
   letter-spacing: -0.3px;
 }
 
 .title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: #667eea;
   margin: 0 0 4px 0;
 }
 
 .org {
-  font-size: 13px;
+  font-size: 14px;
   color: #9ca3af;
   margin: 0;
   font-weight: 400;
@@ -182,20 +182,20 @@ ion-card-content {
 .details-section {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 24px;
+  gap: 16px;
+  margin-bottom: 28px;
 }
 
 .detail-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 14px;
+  font-size: 15px;
   color: #4b5563;
 }
 
 .detail-icon {
-  font-size: 18px;
+  font-size: 20px;
   color: #667eea;
   opacity: 0.8;
   flex-shrink: 0;
@@ -212,9 +212,9 @@ ion-card-content {
   --background: transparent;
   --color: #667eea;
   --border-color: rgba(102, 126, 234, 0.25);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
-  height: 30px;
+  height: 34px;
 }
 
 @media (prefers-color-scheme: dark) {
