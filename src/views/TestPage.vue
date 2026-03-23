@@ -22,7 +22,7 @@
           <ion-card-content>
             <div class="avatar-section">
               <div class="avatar">
-                <ion-icon :icon="personCircleOutline"></ion-icon>
+                <img src="https://pakmud.com/wp-content/uploads/2023/04/funny-images-62.jpg" alt="Nattapon Wongchai" class="avatar-img" />
               </div>
               <div class="status-dot"></div>
             </div>
@@ -95,7 +95,7 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/vue';
-import { personCircleOutline, mailOutline, callOutline, locationOutline, schoolOutline } from 'ionicons/icons';
+import { mailOutline, callOutline, locationOutline, schoolOutline } from 'ionicons/icons';
 
 const tags = ['Photography', 'Creative Direction', 'Film', 'Portrait', 'Editorial'];
 </script>
@@ -147,9 +147,11 @@ ion-card-content {
   box-shadow: 0 4px 16px rgba(102, 126, 234, 0.18);
 }
 
-.avatar ion-icon {
-  font-size: 76px;
-  color: #667eea;
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .status-dot {
