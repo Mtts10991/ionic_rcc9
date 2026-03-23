@@ -54,7 +54,7 @@ import {
   IonRouterOutlet,
   IonSplitPane,
 } from '@ionic/vue';
-import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp } from 'ionicons/icons';
+import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, flaskOutline, flaskSharp } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
 
@@ -64,6 +64,12 @@ const menuItems = [
     url: '/home',
     iosIcon: homeOutline,
     mdIcon: homeSharp,
+  },
+  {
+    title: 'ทดสอบ',
+    url: '/test',
+    iosIcon: flaskOutline,
+    mdIcon: flaskSharp,
   },
   {
     title: 'เกี่ยวกับ',
