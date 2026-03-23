@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Capacitor
+/android/
+/ios/
+
+# Build output (www is default, we use docs for GitHub Pages)
+www/
