@@ -5,20 +5,20 @@
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>หน้าแรก</ion-title>
+        <ion-title>เกี่ยวกับ</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">หน้าแรก</ion-title>
+          <ion-title size="large">เกี่ยวกับ</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <div id="container">
-        <strong>ยินดีต้อนรับสู่แอป Ionic!</strong>
-        <p>เริ่มต้นสร้างแอปด้วย <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">Ionic UI Components</a></p>
+        <strong>เกี่ยวกับแอปนี้</strong>
+        <p>สร้างด้วย Ionic Framework + Vue</p>
       </div>
     </ion-content>
   </ion-page>
@@ -31,7 +31,6 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 <style scoped>
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -47,13 +46,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }
 </style>
