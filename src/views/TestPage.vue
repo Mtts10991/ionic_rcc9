@@ -37,13 +37,10 @@
 
             <div class="bio-section">
               <p class="bio">
-                เกิดและโตที่เชียงใหม่ หลงรักการถ่ายภาพตั้งแต่อายุ 14 ปี เมื่อพ่อมอบกล้องฟิล์มตัวเก่าให้เป็นของขวัญวันเกิด จากเด็กที่ชอบเดินถ่ายรูปตามตลาดเช้า สู่การเรียนต่อด้าน Visual Arts ที่ลอนดอน
+                เด็กเชียงใหม่ที่หลงรักการถ่ายภาพตั้งแต่อายุ 14 ปี เรียนต่อ Visual Arts ที่ลอนดอน กลับมาเปิดสตูดิโอย่านอารีย์ ผลงานลง Vogue Thailand และ National Geographic ฉบับไทย
               </p>
-              <p class="bio">
-                กลับมาเปิดสตูดิโอเล็กๆ ย่านอารีย์เมื่อปี 2561 เริ่มจากงานถ่ายภาพบุคคลให้เพื่อนฝูง จนปากต่อปากพาให้ได้ร่วมงานกับแบรนด์ระดับประเทศ ผลงานถูกตีพิมพ์ใน Vogue Thailand, National Geographic ฉบับภาษาไทย และ a]day Magazine
-              </p>
-              <p class="bio">
-                ปัจจุบันใช้ชีวิตอยู่ระหว่างกรุงเทพฯ กับเชียงใหม่ วันว่างชอบปั่นจักรยานริมแม่น้ำปิง ชงกาแฟดริปดื่มเอง และสอนเวิร์กช็อปถ่ายภาพให้เด็กๆ ในชุมชน เชื่อเสมอว่า "ภาพหนึ่งภาพบอกเล่าเรื่องราวที่คำพูดเอื้อมไม่ถึง"
+              <p class="bio-quote">
+                "ภาพหนึ่งภาพบอกเล่าเรื่องราวที่คำพูดเอื้อมไม่ถึง"
               </p>
             </div>
 
@@ -122,7 +119,13 @@ const tags = ['Photography', 'Creative Direction', 'Film', 'Portrait', 'Editoria
 
 .card-accent {
   height: 6px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f472b6 100%);
+  animation: accent-glow 3s ease-in-out infinite;
+}
+
+@keyframes accent-glow {
+  0%, 100% { box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3); }
+  50% { box-shadow: 0 2px 20px rgba(118, 75, 162, 0.6); }
 }
 
 ion-card-content {
@@ -133,18 +136,74 @@ ion-card-content {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.18);
+  position: relative;
+  animation: neon-pulse 3s ease-in-out infinite;
+}
+
+.avatar::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #667eea, #764ba2, #f472b6, #34d399, #667eea
+  );
+  animation: neon-spin 4s linear infinite;
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.7;
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #667eea, #764ba2, #f472b6, #34d399, #667eea
+  );
+  animation: neon-spin 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes neon-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 15px rgba(102, 126, 234, 0.4),
+      0 0 30px rgba(118, 75, 162, 0.2),
+      0 0 60px rgba(102, 126, 234, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(102, 126, 234, 0.6),
+      0 0 45px rgba(118, 75, 162, 0.35),
+      0 0 80px rgba(102, 126, 234, 0.2);
+  }
+}
+
+@keyframes status-glow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(52, 211, 153, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(52, 211, 153, 0.9), 0 0 28px rgba(52, 211, 153, 0.4);
+  }
 }
 
 .avatar-img {
@@ -155,15 +214,15 @@ ion-card-content {
 }
 
 .status-dot {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background: #34d399;
   border-radius: 50%;
   border: 3px solid #fff;
   position: absolute;
-  bottom: 4px;
-  left: calc(50% + 38px);
-  box-shadow: 0 1px 4px rgba(52, 211, 153, 0.4);
+  bottom: 8px;
+  left: calc(50% + 58px);
+  animation: status-glow 2s ease-in-out infinite;
 }
 
 .info-section {
@@ -177,6 +236,12 @@ ion-card-content {
   color: #1a1a2e;
   margin: 0 0 8px 0;
   letter-spacing: -0.3px;
+  animation: name-glow 3s ease-in-out infinite;
+}
+
+@keyframes name-glow {
+  0%, 100% { text-shadow: none; }
+  50% { text-shadow: 0 0 8px rgba(102, 126, 234, 0.3), 0 0 20px rgba(102, 126, 234, 0.1); }
 }
 
 .title {
@@ -215,6 +280,25 @@ ion-card-content {
   margin-bottom: 0;
 }
 
+.bio-quote {
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  color: #667eea;
+  text-align: center;
+  margin: 16px 0 0 0;
+  padding: 14px 20px;
+  border-left: 3px solid #764ba2;
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.06) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
+  animation: quote-glow 3s ease-in-out infinite;
+}
+
+@keyframes quote-glow {
+  0%, 100% { border-left-color: #764ba2; }
+  50% { border-left-color: #f472b6; }
+}
+
 .details-section {
   display: flex;
   flex-direction: column;
@@ -247,10 +331,18 @@ ion-card-content {
 .tags ion-chip {
   --background: transparent;
   --color: #667eea;
-  --border-color: rgba(102, 126, 234, 0.25);
+  --border-color: rgba(102, 126, 234, 0.35);
   font-size: 13px;
   font-weight: 500;
   height: 34px;
+  transition: all 0.3s ease;
+}
+
+.tags ion-chip:hover {
+  --background: rgba(102, 126, 234, 0.1);
+  --border-color: #667eea;
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.4), 0 0 24px rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
 }
 
 @media (prefers-color-scheme: dark) {
